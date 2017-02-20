@@ -1,0 +1,9 @@
+ul.social.main-block__item
+    -var icons = ['vk', 'github', 'link']
+    each icon in icons
+        li.social__item
+            a(href='#').social__link
+                svg.social__icon
+                    use(xlink:href=`build/assets/img/sprite.svg#${icon}`)
+
+

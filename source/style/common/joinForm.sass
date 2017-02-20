@@ -1,0 +1,64 @@
+p
+  text-align: center
+  .font-user
+    background-color: #F0EFE9
+    width: 40px
+    height: 40px
+    color: #C5CBCE
+    float: left
+    text-align: center
+    line-height: 40px
+    border-radius: 4px 0 0 4px
+  input[type="text"]
+    height: 40px
+    width: 250px
+    border: none
+    border-radius: 0 4px 4px 0
+    padding-left: 10px
+  input[type="password"]
+    height: 40px
+    width: 250px
+    border: none
+    border-radius: 0 4px 4px 0
+    padding-left: 10px
+  .checkbox, .radio
+    display: none
+
+  .checkbox-custom, .radio-custom, .label
+    display: inline-block
+    vertical-align: middle
+
+  .checkbox-custom
+
+    width: 20px
+    height: 20px
+    position: relative
+    background-color: #03BFA3
+    border-radius: 3px
+
+  .checkbox:checked + .checkbox-custom::before
+    content: "\2713"
+    display: block
+    position: absolute
+    color: #fff
+    right: 2px
+    bottom: 2px
+    left: 2px
+  .radio-custom
+    display: inline-block
+    vertical-align: middle
+    width: 20px
+    height: 20px
+    position: relative
+    background-color: #fff
+    border-radius: 10px
+
+  .radio:checked + .radio-custom::before
+    content: '\2022'
+    display: block
+    position: absolute
+    right: 2px
+    bottom: 2px
+    left: 2px
+    color: #03BFA3
+
