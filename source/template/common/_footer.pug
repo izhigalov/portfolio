@@ -1,0 +1,24 @@
+footer.footer
+    .footer_wrap
+        .footer_nav
+            ul
+                li
+                    a(href='portfolio.html') Мои работы
+                li
+                    a(href='portfolio.html') Обо мне
+                li
+                    a(href='portfolio.html') Блог
+                li
+                    a(href='portfolio.html') Авторизация
+        .footer_social
+            ul.social__items
+                -var icons = ['vk_round', 'github_round', 'in_round']
+                each icon in icons
+                    li.social__item
+                        a(href='#').social__link
+                            svg.social__icon
+                                use(xlink:href=`assets/img/sprite/sprite.svg#${icon}`)
+
+    .footer__title
+        p Я вэб-разработчик из Ижевска, и этот сайт я сделал в рамках обучения в Школе онлайн-образования Loftschool
+        p.footer__desc &#169; Игорь Жигалов | Создано с любовью в loftschool | 2017

@@ -1,0 +1,32 @@
+extends ../_template
+
+block variables
+    - var title = 'Home page'
+
+
+block content
+    .wrapper
+        section.section.hero
+            .hero__bg
+                img(src="assets/img/bg.png").hero__bg-img
+            .hero__container
+                img(src="assets/img/portfolio_header.svg").hero-tittle-pic
+                .user
+                    .user__pic-container
+                        img(src="assets/img/avatar.jpg").user__pic
+                        .user__name Игорь Жигалов
+                        .user__desc Личный сайт вэб-разработчика
+        section.section.about
+            .about__col--works.about__col_left
+                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,0 0,110 1000,110")
+            .about__col--works.about__col_right
+                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,110 1000,110 1000,0")
+        section.section.works
+            .section-title(style="background-image: url('assets/img/works_header.svg')")
+                | Мои работы
+            .slider
+                .slider__col.slider__col_left
+                    .block-title Сайт школы онлайн-образования
+                .slider__col.slider__col_right

@@ -5,11 +5,132 @@ block variables
 
 
 block content
-    header.header--mask
-        .person.main-block__item
-            img.person__img.ava(src='/assets/img/avatar.jpg')
-            h2.person__title Игорь Жигалов
-            h3.person__sibsc Личный сайт веб-разработчика
-        section.section.about-main
-            .about_main--left
-            .about_main--right
+    //section.about
+        .maincontent
+            header.header
+                .person.main-block__item
+                    .person__img
+                    h2.person__title--about Игорь Жигалов
+                    h3.person__sibsc--about Личный сайт веб-разработчика
+            section.section.about-main
+                .about-main--left
+                    svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                        polygon(points="0,0 0,110 1000,110")
+                    h2.person__title--join Обо мне
+                    .person__img--about
+                .about-main--right
+                    svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                        polygon(points="0,110 1000,110 1000,0")
+            .about-map
+                include ../common/_map
+
+
+    .wrapper
+        section.section.hero
+            .hero__bg
+                img(src="assets/img/bg.png").hero__bg-img
+            .hero__container
+                img(src="assets/img/portfolio_header.svg").hero-tittle-pic
+                .user
+                    .user__pic-container
+                        img(src="assets/img/avatar.jpg").user__pic
+                        .user__name Игорь Жигалов
+                        .user__desc Личный сайт вэб-разработчика
+            ul.social--about.main-block__item
+                -var icons = ['vk', 'github', 'in']
+                each icon in icons
+                    li.social__item
+                        a(href='#').social__link
+                            svg.social__icon--about
+                                use(xlink:href=`assets/img/sprite/sprite.svg#${icon}`)
+
+        section.section.about
+            .about__col.about__col_left
+                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,0 0,110 1000,110")
+                .section-title(style="background-image: url('assets/img/about_header.svg')")
+                    | Обо мне
+                .about__pic
+                .block-title Кто Я
+                .block-text Я веб разработчик из Ижевска. Мне 30 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.<br><br>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!
+
+
+
+            .about__col.about__col_right
+                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                    polygon(points="0,110 1000,110 1000,0")
+                .skills
+                .block-title Чем я могу быть <br> Вам полезен
+                .skills-text Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+                ul.skills-group
+                    li.skills-group__item
+                        .skills-group__title Frontend
+                        ul.skills-list
+                            li.skills-list__item
+                                .skills
+                                    svg.skill__circle
+
+                                        circle(cx="50" cy="50" r="40").skills__circle-under
+                                        circle(cx="50" cy="50" r="40").skills__circle-above
+                                        //p.skill-desc CSS3
+
+                                    svg.skill__circle
+                                        circle(cx="50" cy="50" r="40").skills__circle-under
+                                        circle(cx="50" cy="50" r="40").skills__circle-above
+                                        CSS3
+                                    svg.skill__circle
+                                        circle(cx="50" cy="50" r="40").skills__circle-under
+                                        circle(cx="50" cy="50" r="40").skills__circle-above
+                        .skills-group__title Backend
+                            ul.skills-list
+                                li.skills-list__item
+                                    .skills
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                            HTML5
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                        .skills-group__title Workflow
+                            ul.skills-list
+                                li.skills-list__item
+                                    .skills
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                            HTML5
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+                                        svg.skill__circle
+                                            circle(cx="50" cy="50" r="40").skills__circle-under
+                                            circle(cx="50" cy="50" r="40").skills__circle-above
+
+
+
+        section.section.map
+            .about__map
+                #map
+                .main-block--map
+                    .block-title--map Контакты
+                    ul.contact
+                        li.contact__item
+                            img(src="assets/img/skype.svg").contact__img
+                            p.contact__desc login_skype
+                        li.contact__item
+                            img(src="assets/img/envelope.svg").contact__img
+                            p.contact__desc rim10@inbox.ru
+                        li.contact__item
+                            img(src="assets/img/phone.svg").contact__img
+                            p.contact__desc +7 912 012 54 14
+                        li.contact__item
+                            img(src="assets/img/map_marker.svg").contact__img
+                            p.contact__desc г. Ижевск, ул.Парковая, д.7
+                include ../common/_footer

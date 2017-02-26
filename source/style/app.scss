@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  width: 100%
 }
 
 @import 'common/greating';
@@ -11,5 +12,16 @@ body {
 @import 'common/joinNav';
 @import 'common/footerWelc';
 @import 'common/joinForm';
+@import 'common/about';
+@import 'common/footer';
+@import 'common/aboutMap';
+@import 'common/fonts';
+@import 'common/hero';
+@import 'common/user';
+@import 'common/section-title';
+@import 'common/skill';
+@import 'common/contact';
+@import 'common/works';
+@import 'common/slider';
 
 

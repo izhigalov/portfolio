@@ -1,9 +1,22 @@
-.ava
+.person__img
   width: 150px
   height: 150px
   border-radius: 120px
+  background: url("../img/avatar.jpg") no-repeat
+  background-size: cover
   display: block
   margin: 30px auto
+  &--about
+    width: 150px
+    height: 150px
+    background: url("/assets/img/avatar.jpg") no-repeat
+    background-size: cover
+    display: block
+    margin: 0 auto
+
+  img
+    max-width: 100%
+    height: auto
   &--about
     width: 450px
     height: 450px
@@ -13,9 +26,25 @@
   text-align: center
   margin: 0
   position: relative
+  font-family: Roboto-Medium, sans-serif
+  font-size: 28px
+  font-weight: 100
+  color: #455a64
+  &--about
+    text-align: center
+    color: #fff
+    font-family: Roboto-Medium, sans-serif
+    font-size: 35px
+    font-weight: 100
+    text-align: center
+
   &--join
     position: relative
     top: 20px
+    font-family: BERNIER Regular, sans-serif
+    font-size: 35px
+    text-align: center
+
   &--join:before, &--join:after
     content: ''
     display: block
@@ -27,9 +56,19 @@
     transform: translateY(-50%)
   &--join:before
     left: -40px
+
   &--join:after
     right: -40px
 
 
+
 .person__sibsc
   color: #7E898F
+  font-family: Roboto-Regular, sans-serif
+  font-size: 16px
+  font-weight: 200
+  &--about
+    color: #fff
+    font-family: Roboto-Light, sans-serif
+    font-size: 16px
+    text-align: center
