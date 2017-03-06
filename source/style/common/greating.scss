@@ -1,5 +1,17 @@
-
+body{
+  margin: 0;
+  padding: 0;
+}
 
 ul li{
   list-style: none;
 }
+
+.wrapper{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+//#link:active + .join__wrap {display: block;}

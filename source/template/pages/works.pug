@@ -6,7 +6,9 @@ block variables
 
 block content
     .wrapper
+
         section.section.hero
+
             .hero__bg
                 img(src="assets/img/bg.png").hero__bg-img
             .hero__container
@@ -16,17 +18,54 @@ block content
                         img(src="assets/img/avatar.jpg").user__pic
                         .user__name Игорь Жигалов
                         .user__desc Личный сайт вэб-разработчика
+            include ../common/_topMenu
+
         section.section.about
             .about__col--works.about__col_left
-                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle--works
                     polygon(points="0,0 0,110 1000,110")
             .about__col--works.about__col_right
-                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
+                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle--works
                     polygon(points="0,110 1000,110 1000,0")
         section.section.works
             .section-title(style="background-image: url('assets/img/works_header.svg')")
                 | Мои работы
             .slider
                 .slider__col.slider__col_left
-                    .block-title Сайт школы онлайн-образования
+                    ul.slide__desc
+                        li.desc__item
+                            .block-title--slide Сайт школы онлайн-образования
+                        li.desc__item
+                            .slide__skills HTML, CCS3, JAVASCRIPT
+                        li.desc__item
+                            a(href="#").slide__link  Посмотреть сайт
                 .slider__col.slider__col_right
+        section.section.feedback
+            .feedback-wrap
+                .section-title--feedback(style="background-image: url('assets/img/about_header.svg')")
+                    | Что обо мне<br>говорят
+                .feedback__items
+                    .feedback__item
+                        .feedback__quote
+                            i.fa.fa-quote-left.fa-3x
+                        .feedback__desc
+                            p Этот парень проходил обучение вэб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .feedback__hero
+                            .feedback_pic
+                            .feedback__hero_desc
+                                h7 Ковальчук Дмитрий
+                                p Основатель Loftschool
+                    .feedback__item
+                        .feedback__quote
+                            i.fa.fa-quote-left.fa-3x
+                        .feedback__desc
+                            p Этот парень проходил обучение вэб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                        .feedback__hero
+                            .feedback_pic
+                            .feedback__hero_desc
+                                h7 Ковальчук Дмитрий
+                                p Основатель Loftschool
+                .feedback__form
+                    .main-block--feedback
+                        .section-title--feedbackform Связаться со мной
+            include ../common/_footer

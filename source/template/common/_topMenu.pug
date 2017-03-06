@@ -1,0 +1,13 @@
+.top__menu
+    ul.social--about.main-block__item
+        -var icons = ['vk', 'github', 'in']
+        each icon in icons
+            li.social__item
+                a(href='#').social__link
+                    svg.social__icon--about
+                        use(xlink:href=`assets/img/sprite/sprite.svg#${icon}`)
+    .hum__menu
+        #hum__nav
+            <span></span>
+            <span></span>
+            <span></span>

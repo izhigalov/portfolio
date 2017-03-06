@@ -10,9 +10,11 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/js/foundation.js" defer></script>
     <script src="assets/js/app.js" defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script><!--[if lt IE 9]>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfoGk2Lso98fzPq4qS7TM1Q6R01GnRyKo" async defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
@@ -27,15 +29,37 @@
             </div>
           </div>
         </div>
+        <div class="top__menu">
+          <ul class="social--about main-block__item">
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__icon--about">
+                  <use xlink:href="assets/img/sprite/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__icon--about">
+                  <use xlink:href="assets/img/sprite/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__icon--about">
+                  <use xlink:href="assets/img/sprite/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+          <div class="hum__menu">
+            <div id="hum__nav"><span></span>
+<span></span>
+<span></span>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="section about">
         <div class="about__col--works about__col_left">
-          <svg class="about__triangle" viewbox="0 0 1000 110" preserveAspectRatio="none">
+          <svg class="about__triangle--works" viewbox="0 0 1000 110" preserveAspectRatio="none">
             <polygon points="0,0 0,110 1000,110"></polygon>
           </svg>
         </div>
         <div class="about__col--works about__col_right">
-          <svg class="about__triangle" viewbox="0 0 1000 110" preserveAspectRatio="none">
+          <svg class="about__triangle--works" viewbox="0 0 1000 110" preserveAspectRatio="none">
             <polygon points="0,110 1000,110 1000,0"></polygon>
           </svg>
         </div>
@@ -44,10 +68,88 @@
         <div class="section-title" style="background-image: url('assets/img/works_header.svg');">Мои работы</div>
         <div class="slider">
           <div class="slider__col slider__col_left">
-            <div class="block-title">Сайт школы онлайн-образования</div>
+            <ul class="slide__desc">
+              <li class="desc__item">
+                <div class="block-title--slide">Сайт школы онлайн-образования</div>
+              </li>
+              <li class="desc__item">
+                <div class="slide__skills">HTML, CCS3, JAVASCRIPT</div>
+              </li>
+              <li class="desc__item"><a class="slide__link" href="#"> Посмотреть сайт</a></li>
+            </ul>
           </div>
           <div class="slider__col slider__col_right"></div>
         </div>
+      </section>
+      <section class="section feedback">
+        <div class="feedback-wrap">
+          <div class="section-title--feedback" style="background-image: url('assets/img/about_header.svg');">Что обо мне<br>говорят</div>
+          <div class="feedback__items">
+            <div class="feedback__item">
+              <div class="feedback__quote"><i class="fa fa-quote-left fa-3x"></i></div>
+              <div class="feedback__desc">
+                <p>Этот парень проходил обучение вэб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+              </div>
+              <div class="feedback__hero">
+                <div class="feedback_pic"></div>
+                <div class="feedback__hero_desc">
+                  <h7>Ковальчук Дмитрий</h7>
+                  <p>Основатель Loftschool</p>
+                </div>
+              </div>
+            </div>
+            <div class="feedback__item">
+              <div class="feedback__quote"><i class="fa fa-quote-left fa-3x"></i></div>
+              <div class="feedback__desc">
+                <p>Этот парень проходил обучение вэб-разработке не где-то, а в Loftschool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
+              </div>
+              <div class="feedback__hero">
+                <div class="feedback_pic"></div>
+                <div class="feedback__hero_desc">
+                  <h7>Ковальчук Дмитрий</h7>
+                  <p>Основатель Loftschool</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="feedback__form">
+            <div class="main-block--feedback">
+              <div class="section-title--feedbackform">Связаться со мной</div>
+            </div>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer_wrap">
+            <div class="footer_nav">
+              <ul>
+                <li><a href="portfolio.html">Мои работы</a></li>
+                <li><a href="portfolio.html">Обо мне</a></li>
+                <li><a href="portfolio.html">Блог</a></li>
+                <li><a href="portfolio.html">Авторизация</a></li>
+              </ul>
+            </div>
+            <div class="footer_social">
+              <ul class="social__items">
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="social__icon">
+                      <use xlink:href="assets/img/sprite/sprite.svg#vk_round"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="social__icon">
+                      <use xlink:href="assets/img/sprite/sprite.svg#github_round"></use>
+                    </svg></a></li>
+                <li class="social__item"><a class="social__link" href="#">
+                    <svg class="social__icon">
+                      <use xlink:href="assets/img/sprite/sprite.svg#in_round"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__title">
+            <p>Я вэб-разработчик из Ижевска, и этот сайт я сделал в рамках обучения в Школе онлайн-образования Loftschool</p>
+            <p class="footer__desc">&#169; Игорь Жигалов | Создано с любовью в loftschool | 2017</p>
+          </div>
+        </footer>
       </section>
     </div>
   </body>

@@ -10,33 +10,14 @@
     <meta content="ie=edge" http-equiv="x-ua-compatible">
     <link rel="stylesheet" href="assets/css/foundation.css">
     <link rel="stylesheet" href="assets/css/app.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/js/foundation.js" defer></script>
     <script src="assets/js/app.js" defer></script>
-    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script><!--[if lt IE 9]>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfoGk2Lso98fzPq4qS7TM1Q6R01GnRyKo" async defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
-    <!--section.about
-    .maincontent
-        header.header
-            .person.main-block__item
-                .person__img
-                h2.person__title--about Игорь Жигалов
-                h3.person__sibsc--about Личный сайт веб-разработчика
-        section.section.about-main
-            .about-main--left
-                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-                    polygon(points="0,0 0,110 1000,110")
-                h2.person__title--join Обо мне
-                .person__img--about
-            .about-main--right
-                svg(viewbox="0 0 1000 110" preserveAspectRatio="none").about__triangle
-                    polygon(points="0,110 1000,110 1000,0")
-        .about-map
-            include ../common/_map
-    
-    
-    -->
     <div class="wrapper">
       <section class="section hero">
         <div class="hero__bg"><img class="hero__bg-img" src="assets/img/bg.png"></div>
@@ -48,20 +29,28 @@
             </div>
           </div>
         </div>
-        <ul class="social--about main-block__item">
-          <li class="social__item"><a class="social__link" href="#">
-              <svg class="social__icon--about">
-                <use xlink:href="assets/img/sprite/sprite.svg#vk"></use>
-              </svg></a></li>
-          <li class="social__item"><a class="social__link" href="#">
-              <svg class="social__icon--about">
-                <use xlink:href="assets/img/sprite/sprite.svg#github"></use>
-              </svg></a></li>
-          <li class="social__item"><a class="social__link" href="#">
-              <svg class="social__icon--about">
-                <use xlink:href="assets/img/sprite/sprite.svg#in"></use>
-              </svg></a></li>
-        </ul>
+        <div class="top__menu">
+          <ul class="social--about main-block__item">
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__icon--about">
+                  <use xlink:href="assets/img/sprite/sprite.svg#vk"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__icon--about">
+                  <use xlink:href="assets/img/sprite/sprite.svg#github"></use>
+                </svg></a></li>
+            <li class="social__item"><a class="social__link" href="#">
+                <svg class="social__icon--about">
+                  <use xlink:href="assets/img/sprite/sprite.svg#in"></use>
+                </svg></a></li>
+          </ul>
+          <div class="hum__menu">
+            <div id="hum__nav"><span></span>
+<span></span>
+<span></span>
+            </div>
+          </div>
+        </div>
       </section>
       <section class="section about">
         <div class="about__col about__col_left">
@@ -86,20 +75,27 @@
               <ul class="skills-list">
                 <li class="skills-list__item">
                   <div class="skills">
-                    <svg class="skill__circle">
-                      <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                      <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                      <!--p.skill-desc CSS3-->
-                    </svg>
-                    <svg class="skill__circle">
-                      <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                      <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                      <CSS3></CSS3>
-                    </svg>
-                    <svg class="skill__circle">
-                      <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                      <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                    </svg>
+                    <div class="skill-wrap">
+                      <svg class="skill__circle">
+                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
+                        <circle class="skills__circle-above html" cx="50" cy="50" r="40"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">HTML5</text>
+                      </svg>
+                    </div>
+                    <div class="skill-wrap">
+                      <svg class="skill__circle">
+                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
+                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">CSS3</text>
+                      </svg>
+                    </div>
+                    <div class="skill-wrap">
+                      <svg class="skill__circle">
+                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
+                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">JavaScript</text>
+                      </svg>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -110,19 +106,22 @@
                       <svg class="skill__circle">
                         <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
                         <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <HTML5></HTML5>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">PHP</text>
                       </svg>
                       <svg class="skill__circle">
                         <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
                         <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">mySQL</text>
                       </svg>
                       <svg class="skill__circle">
                         <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
                         <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Node.js</text>
                       </svg>
                       <svg class="skill__circle">
                         <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
                         <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Mongo.db</text>
                       </svg>
                     </div>
                   </li>
@@ -135,15 +134,17 @@
                       <svg class="skill__circle">
                         <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
                         <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <HTML5></HTML5>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">GIT</text>
                       </svg>
                       <svg class="skill__circle">
                         <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
                         <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Gulp</text>
                       </svg>
                       <svg class="skill__circle">
                         <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
                         <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Bower</text>
                       </svg>
                     </div>
                   </li>
@@ -153,58 +154,26 @@
           </ul>
         </div>
       </section>
-      <section class="section map">
-        <div class="about__map">
-          <div id="map"></div>
-          <div class="main-block--map">
-            <div class="block-title--map">Контакты</div>
-            <ul class="contact">
-              <li class="contact__item"><img class="contact__img" src="assets/img/skype.svg">
-                <p class="contact__desc">login_skype</p>
-              </li>
-              <li class="contact__item"><img class="contact__img" src="assets/img/envelope.svg">
-                <p class="contact__desc">rim10@inbox.ru</p>
-              </li>
-              <li class="contact__item"><img class="contact__img" src="assets/img/phone.svg">
-                <p class="contact__desc">+7 912 012 54 14</p>
-              </li>
-              <li class="contact__item"><img class="contact__img" src="assets/img/map_marker.svg">
-                <p class="contact__desc">г. Ижевск, ул.Парковая, д.7</p>
-              </li>
-            </ul>
-          </div>
-          <footer class="footer">
-            <div class="footer_wrap">
-              <div class="footer_nav">
-                <ul>
-                  <li><a href="portfolio.html">Мои работы</a></li>
-                  <li><a href="portfolio.html">Обо мне</a></li>
-                  <li><a href="portfolio.html">Блог</a></li>
-                  <li><a href="portfolio.html">Авторизация</a></li>
-                </ul>
-              </div>
-              <div class="footer_social">
-                <ul class="social__items">
-                  <li class="social__item"><a class="social__link" href="#">
-                      <svg class="social__icon">
-                        <use xlink:href="assets/img/sprite/sprite.svg#vk_round"></use>
-                      </svg></a></li>
-                  <li class="social__item"><a class="social__link" href="#">
-                      <svg class="social__icon">
-                        <use xlink:href="assets/img/sprite/sprite.svg#github_round"></use>
-                      </svg></a></li>
-                  <li class="social__item"><a class="social__link" href="#">
-                      <svg class="social__icon">
-                        <use xlink:href="assets/img/sprite/sprite.svg#in_round"></use>
-                      </svg></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="footer__title">
-              <p>Я вэб-разработчик из Ижевска, и этот сайт я сделал в рамках обучения в Школе онлайн-образования Loftschool</p>
-              <p class="footer__desc">&#169; Игорь Жигалов | Создано с любовью в loftschool | 2017</p>
-            </div>
-          </footer>
+      <section id="cd-google-map">
+        <div id="google-container"></div>
+        <div id="cd-zoom-in"></div>
+        <div id="cd-zoom-out"></div>
+        <div class="main-block--map">
+          <div class="block-title--map">Контакты</div>
+          <ul class="contact">
+            <li class="contact__item"><img class="contact__img" src="assets/img/skype.svg">
+              <p class="contact__desc">login_skype</p>
+            </li>
+            <li class="contact__item"><img class="contact__img" src="assets/img/envelope.svg">
+              <p class="contact__desc">rim10@inbox.ru</p>
+            </li>
+            <li class="contact__item"><img class="contact__img" src="assets/img/phone.svg">
+              <p class="contact__desc">+7 912 012 54 14</p>
+            </li>
+            <li class="contact__item"><img class="contact__img" src="assets/img/map_marker.svg">
+              <p class="contact__desc">г. Ижевск, ул.Парковая, д.7</p>
+            </li>
+          </ul>
         </div>
       </section>
     </div>
