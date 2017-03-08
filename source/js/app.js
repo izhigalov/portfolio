@@ -22,6 +22,14 @@ $(document).ready(function(){
         $(this).toggleClass('open');
     });
 
+    $('.open-menu').on('click', function() {
+        $('.overlay').addClass('open-nav');
+    });
+
+    $('.close-menu').on('click', function() {
+        $('.overlay').removeClass('open-nav');
+    });
+
     $('.main-block').addClass('animated flipInX');
 
     var preloader = (function(){

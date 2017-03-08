@@ -7,7 +7,15 @@
                     svg.social__icon--about
                         use(xlink:href=`assets/img/sprite/sprite.svg#${icon}`)
     .hum__menu
-        #hum__nav
+        #hum__nav.open-menu
             <span></span>
             <span></span>
             <span></span>
+    .overlay.open-nav
+        nav.overlay-menu
+            ul
+                li
+                    a(href="#") Обо мне
+                    a(href="#") Мои работы
+                    a(href="#") Блог
+            .close-menu
