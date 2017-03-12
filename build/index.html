@@ -14,47 +14,81 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/js/foundation.js" defer></script>
     <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/blur.js" defer></script>
+    <script src="assets/js/slider.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfoGk2Lso98fzPq4qS7TM1Q6R01GnRyKo" async defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
   <body>
     <div class="header">
-      <div class="auth"><a class="auth_link" id="link" href="join.html">Авторизация</a></div>
-      <div class="main-block">
-        <div class="person main-block__item">
-          <div class="person__img"></div>
-          <h2 class="person__title">Игорь Жигалов</h2>
-          <h3 class="person__sibsc">Личный сайт веб-разработчика</h3>
+      <div class="auth"><a class="auth_link" id="link" href="#">Авторизация</a></div>
+      <div class="flip-container">
+        <div class="flipper">
+          <div class="front">
+            <div class="person main-block__item">
+              <div class="person__img"></div>
+              <h2 class="person__title">Игорь Жигалов</h2>
+              <h3 class="person__sibsc">Личный сайт веб-разработчика</h3>
+            </div>
+            <ul class="social main-block__item">
+              <li class="social__item"><a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="assets/img/sprite/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="assets/img/sprite/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="social__item"><a class="social__link" href="#">
+                  <svg class="social__icon">
+                    <use xlink:href="assets/img/sprite/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+            <ul class="nav main-block__item">
+              <li class="nav__item"><a class="nav__link link-right" href="works.html">Мои работы</a></li>
+              <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
+              <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
+            </ul>
+          </div>
+          <div class="back">
+            <h2 class="person__title--join">Авторизуйтесь</h2>
+            <div class="join-form">
+              <form>
+                <p><span class="font-user"><img src="assets/img/login.svg"></span>
+                  <label>
+                    <input type="text" name="username" placeholder="Логин">
+                  </label>
+                </p>
+                <p><span class="font-user"><img src="assets/img/password.svg"></span>
+                  <label>
+                    <input type="text" name="password" placeholder="Пароль">
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="checkbox" type="checkbox"><span class="checkbox-custom"></span><span class="label">Я человек</span>
+                  </label>
+                </p>
+                <p>Вы точно не робот?</p>
+                <p>
+                  <label>
+                    <input class="radio" type="radio" value="sure"><span class="radio-custom"></span><span class="capt">Да</span>
+                    <input class="radio" type="radio" value="not sure"><span class="radio-custom"></span><span class="capt">Не уверен</span>
+                  </label>
+                </p>
+              </form>
+            </div>
+            <ul class="nav__join main-block__item">
+              <li class="nav__item--join"><a class="nav__link" id="link" href="index.html">На главную</a></li>
+              <li class="nav__item--join"><a class="nav__link" href="#">Войти</a></li>
+            </ul>
+          </div>
         </div>
-        <ul class="social main-block__item">
-          <li class="social__item"><a class="social__link" href="#">
-              <svg class="social__icon">
-                <use xlink:href="assets/img/sprite/sprite.svg#vk"></use>
-              </svg></a></li>
-          <li class="social__item"><a class="social__link" href="#">
-              <svg class="social__icon">
-                <use xlink:href="assets/img/sprite/sprite.svg#github"></use>
-              </svg></a></li>
-          <li class="social__item"><a class="social__link" href="#">
-              <svg class="social__icon">
-                <use xlink:href="assets/img/sprite/sprite.svg#in"></use>
-              </svg></a></li>
-        </ul>
-        <ul class="nav main-block__item">
-          <li class="nav__item"><a class="nav__link link-right" href="works.html">Мои работы</a></li>
-          <li class="nav__item"><a class="nav__link" href="about.html">Обо мне</a></li>
-          <li class="nav__item"><a class="nav__link" href="blog.html">Блог</a></li>
-        </ul>
       </div>
       <footer class="footer__main">
         <p class="footer__desc">&#169; Игорь Жигалов | Создано с любовью в loftschool | 2017</p>
       </footer>
     </div>
-    <div class="preloader">
-      <div class="preloader__spinner">
-        <div class="preloader__animation"></div>
-        <div class="preloader__percents">0%</div>
-      </div>
-    </div>
+    <!--include ../common/_preloader-->
   </body>
 </html>

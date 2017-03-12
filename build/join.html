@@ -14,6 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/js/foundation.js" defer></script>
     <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/blur.js" defer></script>
+    <script src="assets/js/slider.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfoGk2Lso98fzPq4qS7TM1Q6R01GnRyKo" async defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
@@ -23,12 +25,12 @@
         <h2 class="person__title--join">Авторизуйтесь</h2>
         <div class="join-form">
           <form>
-            <p><span class="font-user"></span>
+            <p><span class="font-user"><img src="assets/img/login.svg"></span>
               <label>
                 <input type="text" name="username" placeholder="Логин">
               </label>
             </p>
-            <p><span class="font-user"></span>
+            <p><span class="font-user"><img src="assets/img/password.svg"></span>
               <label>
                 <input type="text" name="password" placeholder="Пароль">
               </label>
@@ -41,14 +43,14 @@
             <p>Вы точно не робот?</p>
             <p>
               <label>
-                <input class="radio" type="radio" value="sure"><span class="radio-custom"></span><span>Да</span>
-                <input class="radio" type="radio" value="not sure"><span class="radio-custom"></span><span>Не уверен</span>
+                <input class="radio" type="radio" value="sure"><span class="radio-custom"></span><span class="capt">Да</span>
+                <input class="radio" type="radio" value="not sure"><span class="radio-custom"></span><span class="capt">Не уверен</span>
               </label>
             </p>
           </form>
         </div>
-        <ul class="nav main-block__item">
-          <li class="nav__item--join"><a class="nav__link" href="index.html">На главную</a></li>
+        <ul class="nav__join main-block__item">
+          <li class="nav__item--join"><a class="nav__link" id="link" href="index.html">На главную</a></li>
           <li class="nav__item--join"><a class="nav__link" href="#">Войти</a></li>
         </ul>
       </div>

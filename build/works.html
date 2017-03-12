@@ -14,6 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/js/foundation.js" defer></script>
     <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/blur.js" defer></script>
+    <script src="assets/js/slider.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfoGk2Lso98fzPq4qS7TM1Q6R01GnRyKo" async defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
@@ -49,14 +51,14 @@
 <span></span>
 <span></span>
             </div>
-          </div>
-          <div class="overlay open-nav">
-            <nav class="overlay-menu">
-              <ul>
-                <li><a href="#">Обо мне</a><a href="#">Мои работы</a><a href="#">Блог</a></li>
-              </ul>
-              <div class="close-menu"></div>
-            </nav>
+            <div class="open-nav">
+              <nav class="overlay-menu">
+                <ul>
+                  <li><a href="about.html">Обо мне</a><a href="works.html">Мои работы</a><a href="blog.html">Блог</a><a href="index.html">Авторизация</a></li>
+                </ul>
+                <div class="close-menu"></div>
+              </nav>
+            </div>
           </div>
         </div>
       </section>
@@ -76,20 +78,38 @@
         <div class="section-title" style="background-image: url('assets/img/works_header.svg');">Мои работы</div>
         <div class="slider">
           <div class="slider__col slider__col_left">
-            <ul class="slide__desc">
-              <li class="desc__item">
-                <div class="block-title--slide">Сайт школы онлайн-образования</div>
-              </li>
-              <li class="desc__item">
-                <div class="slide__skills">HTML, CCS3, JAVASCRIPT</div>
-              </li>
-              <li class="desc__item"><a class="slide__link" href="#"> Посмотреть сайт</a></li>
-            </ul>
+            <div class="work">
+              <div class="work__preview"><img class="work__pic" src="assets/img/work-01.png"></div>
+              <ul class="slide__desc">
+                <li class="desc__item">
+                  <div class="work__title block-title--slide">Сайт школы онлайн-образования</div>
+                </li>
+                <li class="desc__item">
+                  <div class="work__technology slide__skills">HTML, CCS3, JAVASCRIPT</div>
+                </li>
+                <li class="desc__item"><a class="slide__link" href="#"> Посмотреть сайт</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="slider__col slider__col_right"></div>
+          <div class="slider__col slider__col_right">
+            <div class="work__slider">
+              <div class="work__prev toggle column column-left"><a class="toggle__link toggle__link_prev" href="#"><img class="toggle__icon" src="assets/img/portf_arrow_down.svg">
+                  <ul class="work-slider__list work-slider__list_prev">
+                    <li class="work-slider__item work-slider__item_current"><img class="work-slider__img" src="assets/img/work-01.png"></li>
+                    <li class="work-slider__item"><img class="work-slider__img" src="assets/img/work-01.png"></li>
+                    <li class="work-slider__item"><img class="work-slider__img" src="assets/img/work-01.png"></li>
+                  </ul></a></div>
+              <div class="work__next toggle column column-right"><a class="toggle__link toggle__link_next" href="#"><img class="toggle__icon" src="assets/img/portf_arrow_up.svg">
+                  <ul class="work-slider__list work-slider__list_next">
+                    <li class="work-slider__item"><img class="work-slider__img" src="assets/img/work-01.png"></li>
+                    <li class="work-slider__item"><img class="work-slider__img" src="assets/img/work-01.png"></li>
+                    <li class="work-slider__item work-slider__item_current"><img class="work-slider__img" src="assets/img/work-01.png"></li>
+                  </ul></a></div>
+            </div>
+          </div>
         </div>
       </section>
-      <section class="section feedback">
+      <section class="section feedback blur">
         <div class="feedback-wrap">
           <div class="section-title--feedback" style="background-image: url('assets/img/about_header.svg');">Что обо мне<br>говорят</div>
           <div class="feedback__items">
@@ -121,8 +141,30 @@
             </div>
           </div>
           <div class="feedback__form">
-            <div class="main-block--feedback">
-              <div class="section-title--feedbackform">Связаться со мной</div>
+            <div class="blur-form__wrapper">
+              <div class="blur-form"></div>
+              <div class="form__content">
+                <div class="section-title--feedbackform">Связаться со мной</div>
+                <div class="form__items">
+                  <div class="form__item">
+                    <label>
+                      <input class="form__input" type="text" name="name" placeholder="Ваше имя">
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <label>
+                      <input class="form__input" type="text" name="email" placeholder="Ваш email">
+                    </label>
+                  </div>
+                  <div class="form__item">
+                    <textarea class="form__input-area" placeholder="Ваше сообщение"></textarea>
+                  </div>
+                </div>
+                <ul class="nav__join--feedback main-block__item">
+                  <li class="nav__item--join"><a class="nav__link" id="link" href="index.html">Отправить</a></li>
+                  <li class="nav__item--join"><a class="nav__link" href="#">Очистить</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

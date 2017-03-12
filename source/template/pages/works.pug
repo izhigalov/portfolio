@@ -32,15 +32,39 @@ block content
                 | Мои работы
             .slider
                 .slider__col.slider__col_left
-                    ul.slide__desc
-                        li.desc__item
-                            .block-title--slide Сайт школы онлайн-образования
-                        li.desc__item
-                            .slide__skills HTML, CCS3, JAVASCRIPT
-                        li.desc__item
-                            a(href="#").slide__link  Посмотреть сайт
+                    .work
+                        .work__preview
+                            img(src="assets/img/work-01.png").work__pic
+                        ul.slide__desc
+                            li.desc__item
+                                .work__title.block-title--slide Сайт школы онлайн-образования
+                            li.desc__item
+                                .work__technology.slide__skills HTML, CCS3, JAVASCRIPT
+                            li.desc__item
+                                a(href="#").slide__link  Посмотреть сайт
                 .slider__col.slider__col_right
-        section.section.feedback
+                    .work__slider
+                        .work__prev.toggle.column.column-left
+                            a(href="#").toggle__link.toggle__link_prev
+                                img(src="assets/img/portf_arrow_down.svg").toggle__icon
+                                ul.work-slider__list.work-slider__list_prev
+                                    li.work-slider__item.work-slider__item_current
+                                        img(src='assets/img/work-01.png').work-slider__img
+                                    li.work-slider__item
+                                        img(src='assets/img/work-01.png').work-slider__img
+                                    li.work-slider__item
+                                        img(src='assets/img/work-01.png').work-slider__img
+                        .work__next.toggle.column.column-right
+                            a(href="#").toggle__link.toggle__link_next
+                                img(src="assets/img/portf_arrow_up.svg").toggle__icon
+                                ul.work-slider__list.work-slider__list_next
+                                    li.work-slider__item
+                                        img(src='assets/img/work-01.png').work-slider__img
+                                    li.work-slider__item
+                                        img(src='assets/img/work-01.png').work-slider__img
+                                    li.work-slider__item.work-slider__item_current
+                                        img(src='assets/img/work-01.png').work-slider__img
+        section.section.feedback.blur
             .feedback-wrap
                 .section-title--feedback(style="background-image: url('assets/img/about_header.svg')")
                     | Что обо мне<br>говорят
@@ -66,6 +90,32 @@ block content
                                 h7 Ковальчук Дмитрий
                                 p Основатель Loftschool
                 .feedback__form
-                    .main-block--feedback
-                        .section-title--feedbackform Связаться со мной
+                    .blur-form__wrapper
+                        .blur-form
+                        .form__content
+                            .section-title--feedbackform Связаться со мной
+                            .form__items
+                                .form__item
+                                    label
+                                        input.form__input(
+                                        type='text'
+                                        name='name'
+                                        placeholder='Ваше имя'
+                                        )
+                                .form__item
+                                    label
+                                        input.form__input(
+                                        type='text'
+                                        name='email'
+                                        placeholder='Ваш email'
+                                        )
+                                .form__item
+                                    textarea.form__input-area(
+                                        placeholder='Ваше сообщение'
+                                        )
+                            ul.nav__join--feedback.main-block__item
+                                li.nav__item--join
+                                    a.nav__link#link(href='index.html') Отправить
+                                li.nav__item--join
+                                    a.nav__link(href='#') Очистить
             include ../common/_footer

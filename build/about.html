@@ -14,6 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="assets/js/foundation.js" defer></script>
     <script src="assets/js/app.js" defer></script>
+    <script src="assets/js/blur.js" defer></script>
+    <script src="assets/js/slider.js" defer></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfoGk2Lso98fzPq4qS7TM1Q6R01GnRyKo" async defer></script><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
   </head>
@@ -49,14 +51,14 @@
 <span></span>
 <span></span>
             </div>
-          </div>
-          <div class="overlay open-nav">
-            <nav class="overlay-menu">
-              <ul>
-                <li><a href="#">Обо мне</a><a href="#">Мои работы</a><a href="#">Блог</a></li>
-              </ul>
-              <div class="close-menu"></div>
-            </nav>
+            <div class="open-nav">
+              <nav class="overlay-menu">
+                <ul>
+                  <li><a href="about.html">Обо мне</a><a href="works.html">Мои работы</a><a href="blog.html">Блог</a><a href="index.html">Авторизация</a></li>
+                </ul>
+                <div class="close-menu"></div>
+              </nav>
+            </div>
           </div>
         </div>
       </section>
@@ -84,24 +86,24 @@
                 <li class="skills-list__item">
                   <div class="skills">
                     <div class="skill-wrap">
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above html" cx="50" cy="50" r="40"></circle>
+                      <svg class="circles">
+                        <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                        <circle class="circle__second circle-15" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
                         <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">HTML5</text>
                       </svg>
                     </div>
                     <div class="skill-wrap">
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
+                      <svg class="circles">
+                        <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                        <circle class="circle__second circle-15" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
                         <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">CSS3</text>
                       </svg>
                     </div>
                     <div class="skill-wrap">
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">JavaScript</text>
+                      <svg class="circles">
+                        <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                        <circle class="circle__second circle-25" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
+                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Javascript</text>
                       </svg>
                     </div>
                   </div>
@@ -111,26 +113,34 @@
                 <ul class="skills-list">
                   <li class="skills-list__item">
                     <div class="skills">
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">PHP</text>
-                      </svg>
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">mySQL</text>
-                      </svg>
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Node.js</text>
-                      </svg>
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Mongo.db</text>
-                      </svg>
+                      <div class="skill-wrap">
+                        <svg class="circles">
+                          <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                          <circle class="circle__second circle-10" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
+                          <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">PHP</text>
+                        </svg>
+                      </div>
+                      <div class="skill-wrap">
+                        <svg class="circles">
+                          <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                          <circle class="circle__second circle-10" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
+                          <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">mySQL</text>
+                        </svg>
+                      </div>
+                      <div class="skill-wrap">
+                        <svg class="circles">
+                          <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                          <circle class="circle__second circle-25" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
+                          <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Node.js</text>
+                        </svg>
+                      </div>
+                      <div class="skill-wrap">
+                        <svg class="circles">
+                          <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                          <circle class="circle__second circle-25" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
+                          <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Mongo.db</text>
+                        </svg>
+                      </div>
                     </div>
                   </li>
                 </ul>
@@ -139,21 +149,27 @@
                 <ul class="skills-list">
                   <li class="skills-list__item">
                     <div class="skills">
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">GIT</text>
-                      </svg>
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Gulp</text>
-                      </svg>
-                      <svg class="skill__circle">
-                        <circle class="skills__circle-under" cx="50" cy="50" r="40"></circle>
-                        <circle class="skills__circle-above" cx="50" cy="50" r="40"></circle>
-                        <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">Bower</text>
-                      </svg>
+                      <div class="skill-wrap">
+                        <svg class="circles">
+                          <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                          <circle class="circle__second circle-15" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
+                          <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">GIT</text>
+                        </svg>
+                      </div>
+                      <div class="skill-wrap">
+                        <svg class="circles">
+                          <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                          <circle class="circle__second circle-25" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
+                          <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">GULP</text>
+                        </svg>
+                      </div>
+                      <div class="skill-wrap">
+                        <svg class="circles">
+                          <circle class="circle__first" cx="50" cy="50" r="40"></circle>
+                          <circle class="circle__second circle-35" cx="50" cy="50" r="40" transform="rotate(-90 50 50)"></circle>
+                          <text x="50" y="50" text-anchor="middle" dy="7" fill="#10C1A8" font-size="14">BOWER</text>
+                        </svg>
+                      </div>
                     </div>
                   </li>
                 </ul>

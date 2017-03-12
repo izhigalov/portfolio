@@ -3,6 +3,7 @@
   justify-content: space-between
   align-items: center
 
+
 .hum__menu
   position: relative
   right: 20px
@@ -15,6 +16,7 @@
   transform: rotate(0deg)
   transition: .5s ease-in-out
   cursor: pointer
+  z-index: 99
   span
     display: block
     position: absolute
@@ -43,31 +45,29 @@
   transform: rotate(-135deg)
 
 
-.overlay
+
+.open-nav
   position: fixed
-  background: rgba(51, 55, 69, 0.80)
+  background: rgba(51, 55, 69, 0.9)
   top: 0
   left: 0
   width: 100%
+  display: none
   height: 100%
-  opacity: 0
-  visibility: hidden
-  transition: opacity .35s, visibility .35s, height .35s
+  //transition: opacity .35s, visibility .35s, height .35s
   overflow: hidden
-  .open-nav
-    opacity: 1
-    visibility: visible
-    height: 100%
+  z-index: 10
   nav
     position: relative
     height: 50%
     top: 50%
     transform: translateY(-50%)
-    font-size: 50px
+    font-size: 30px
     font-weight: 400
     text-transform: uppercase
     text-align: center
-    letter-spacing: 40px
+    letter-spacing: 10px
+    line-height: 70px
 
     ul
       list-style: none
@@ -80,14 +80,14 @@
       li
         display: block
         position: relative
-        opacity: 0
         margin-bottom: 50px
 
         a
           display: block
           position: relative
-          color: #fff
+          color: #fff !important
           text-decoration: none
+          font-family: BERNIER Regular
           overflow: hidden
 
 

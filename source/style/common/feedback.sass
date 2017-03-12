@@ -1,18 +1,23 @@
 .feedback-wrap
   display: flex
   flex-direction: column
-  justify-content: center
+  justify-content: space-around
   align-items: center
   flex: 1
   background: url("../img/bg_works.gif") no-repeat
   background-size: cover
   min-height: 1013px
+  position: relative
 
 .feedback__items
   display: flex
   justify-content: center
+  position: absolute
+  top: 25%
+
 .feedback__item
   width: 400px
+  padding: 0 35px
 .feedback__desc
   p
     text-align: left
@@ -32,4 +37,5 @@
     text-align: left
     color: #22B49F
 .feedback__form
-  margin-top: 50px
+  position: absolute
+  top: 70%

@@ -1,0 +1,12 @@
+.auth
+    a.auth_link#link(href='#') Авторизация
+.flip-container
+    .flipper
+        .front
+            include _person.pug
+            include _social.pug
+            include _nav.pug
+        .back
+            h2.person__title--join Авторизуйтесь
+            include _joinForm.pug
+            include _joinNav.pug
