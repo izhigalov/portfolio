@@ -1,34 +1,8 @@
-(function() {
-  'use strict';
-
-  setTimeout(function() {
-    document.querySelector('.greating_picture').classList.add('m--show');
-  }, 1000);
-})();
 
 
 
 
-
-$(document).ready(function(){
-    $('#hum__nav').click(function(){
-        $('#hum__nav').toggleClass('open');
-        $('.open-nav').fadeToggle("slow");
-    });
-    $('.flip-container').addClass('animated flipInX');
-
-
-    $("#link").click(function(){
-        $('.back').css({
-            'transform' : 'rotateY(0deg)'
-        });
-        $('.front').css({
-            'transform' : 'rotateY(180deg)'
-        });
-    });
-
-
-    var Slider = (function () {
+    /*var Slider = (function () {
         var items = $('.work-slider__item', '.work-slider__list_next'),
             index = 1,
             ndx,
@@ -157,37 +131,25 @@ $(document).ready(function(){
             }
         }
     })
-    ();
+    ();*/
 
-
-
-
-
-    var parallaxContainer = document.getElementById('parallax'),
-        layers = parallaxContainer.children;
-    window.addEventListener('mousemove', function (e) {
-        var pageX = e.pageX,
-            pageY = e.pageY,
-            initialX = (window.innerWidth / 2) - pageX,
-            initialY = (window.innerHeight / 2) - pageY;
-
-        [].slice.call(layers).forEach(function (layer, i) {
-            var
-                divider = i / 100,
-                bottomPosition = (window.innerHeight / 2) * divider,
-                positionX = initialX * divider,
-                positionY = initialY * divider,
-                layerStyle = layer.style,
-                transformString = 'translate3d('+ positionX + 'px,' + positionY + 'px, 0)';
-
-            layerStyle.transform = transformString;
-            layerStyle.bottom = '-' + bottomPosition + 'px';
-
-        });
-
-
+$(document).ready(function(){
+    $('#hum__nav').click(function(){
+        $('#hum__nav').toggleClass('open');
+        $('.open-nav').fadeToggle("slow");
     });
 
+    $('.flip-container').addClass('animated flipInX');
+
+
+    $("#link").click(function(){
+        $('.back').css({
+            'transform' : 'rotateY(0deg)'
+        });
+        $('.front').css({
+            'transform' : 'rotateY(180deg)'
+        });
+    });
 
     var preloader = (function(){
         var percentsTotal = 0;
@@ -486,13 +448,6 @@ jQuery(document).ready(function($){
     map.controls[google.maps.ControlPosition.LEFT_TOP].push(zoomControlDiv);
 });
 
-var s = Snap('.skills__circle-above');
-var progress = s.select('.skills__circle-above');
-
-progress.attr({strokeDasharray: '0, 110'});
-Snap.animate(0,110, function( value ) {
-    progress.attr({ 'stroke-dasharray':value+',110'});
-}, 5000);
 
 
 

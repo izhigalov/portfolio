@@ -1,4 +1,4 @@
-.parallax__wrapper {
+/*.parallax__wrapper {
   width: 100%;
   height: 100vh;
   background: #88AFAE;
@@ -27,4 +27,40 @@
   position: absolute;
   height: 100%;
   bottom: 0;
+}*/
+
+.parallax__wrapper {
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  background: #88AFAE;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+}
+
+#parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.parallax__layer{
+  height: 100%;
+  position: absolute;
+  min-width: 100%;
+
+}
+
+.parallax__layer img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }

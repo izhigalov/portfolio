@@ -113,7 +113,14 @@ block content
                                     textarea.form__input-area(
                                         placeholder='Ваше сообщение'
                                         )
-                            ul.nav__join--feedback.main-block__item
+                            .form__buttons
+                                button.form__btn(
+                                    type='submit'
+                                ) Отправить
+                                button.form__btn(
+                                type='reset'
+                                ) Очистить
+                            //ul.nav__join--feedback.main-block__item
                                 li.nav__item--join
                                     a.nav__link#link(href='index.html') Отправить
                                 li.nav__item--join

@@ -21,10 +21,15 @@
 .feedback__desc
   p
     text-align: left
+    font-family: Roboto-Italic
+    font-size: 18px
+
 .fa-quote-left
   color: #DEDFE1
 .feedback__hero
   display: flex
+  justify-content: flex-start
+  align-items: center
 .feedback_pic
   width: 100px
   height: 100px
@@ -33,9 +38,29 @@
   background-size: cover
 .feedback__hero_desc
   margin-left: 20px
+  line-height: 5px
   h7, p
     text-align: left
     color: #22B49F
 .feedback__form
   position: absolute
   top: 70%
+.form__buttons
+  display: flex
+  justify-content: space-between
+  width: 350px
+.form__btn
+  width: 50%
+  padding: 15px
+  text-decoration: none
+  font-family: 'robotomedium'
+  text-align: center
+  color: #fff
+  background-color: #00bfa5
+  transition: .3s
+  position: relative
+  bottom: -10px
+  border: none
+  cursor: pointer
+.form__btn:hover
+  background-color: rgba(0, 150, 136, 0.7)
